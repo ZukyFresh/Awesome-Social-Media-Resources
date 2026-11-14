@@ -1,0 +1,71 @@
+# ============================================================
+# JEDINÝ ZDROJ DAT. Markdown v categories/ a README.md se generuje.
+# Needituj .md ručně – přepíše se. Spusť: python scripts/generate.py
+# ============================================================
+
+# Pořadí kategorií = pořadí v README
+categories:
+  cybersec:
+    title: Cybersec
+    description: Offensive, defensive, research, CTF.
+  dev:
+    title: Dev
+    description: Programování, architektura, DevOps.
+  hardware-pc:
+    title: Hardware / PC
+    description: Komponenty, recenze, stavby PC.
+  homelab:
+    title: Homelab / Self-hosting
+    description: Servery, sítě, self-hosted služby.
+  general-tech:
+    title: General tech
+    description: Tech novinky a obecný obsah.
+
+# Pořadí platforem = pořadí sekcí v každé kategorii
+platforms:
+  youtube:  { title: YouTube }
+  x:        { title: X / Twitter }
+  bluesky:  { title: Bluesky }
+  mastodon: { title: Mastodon }
+  linkedin: { title: LinkedIn }
+  github:   { title: GitHub }
+  blog:     { title: Blog / Web }
+  twitch:   { title: Twitch }
+  podcast:  { title: Podcast }
+
+# Povolené příznaky (zobrazí se jako ikony)
+flags:
+  top:      { icon: "⭐", meaning: Top tier – sledovat vždy }
+  cz:       { icon: "🇨🇿", meaning: Česky / slovensky mluvící }
+  inactive: { icon: "💤", meaning: Neaktivní >6 měsíců }
+
+# ------------------------------------------------------------
+# Lidé. Šablona:
+#
+#  - name: Jméno Příjmení
+#    description: Krátce, čím je zajímavý (1 věta).
+#    categories: [cybersec, dev]     # min. 1, může jich být víc
+#    flags: [top, cz]                # volitelné
+#    added: 2026-11                  # volitelné
+#    links:                          # klíče musí být z `platforms`
+#      youtube: https://www.youtube.com/@handle
+#      x: https://x.com/handle
+# ------------------------------------------------------------
+people:
+  - name: Ukázková Osoba
+    description: Smaž mě – ukázkový záznam pro test generátoru.
+    categories: [cybersec, dev]
+    flags: [top]
+    added: 2026-11
+    links:
+      youtube: https://www.youtube.com/@example
+      github: https://github.com/example
+      blog: https://example.com
+
+  - name: Druhá Ukázka
+    description: Smaž mě – ukázka českého tvůrce.
+    categories: [homelab]
+    flags: [cz]
+    links:
+      youtube: https://www.youtube.com/@example2
+      mastodon: https://infosec.exchange/@example
